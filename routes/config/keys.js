@@ -1,5 +1,5 @@
-module.exports = {
-    googleProjectID: 'nachozorrabot-ffyp',
-    dialogFlowSessionID: 'nacho-zorra-bot-session',
-    dialogFlowSessionLanguageCode: 'es-419'
+if(process.env.NODE_ENV === 'production') {
+    module.exports = require('./prod');
+} else {
+    module.exports = require('./dev');
 }
