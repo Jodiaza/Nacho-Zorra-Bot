@@ -1,5 +1,5 @@
 import Styled from '@emotion/styled'
-import Image from 'next/image'
+import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const StyledHeader = Styled.div`
@@ -57,7 +57,9 @@ const Header = () => {
     return (
         <StyledHeader>
             <div className='nacho-zorra'>
-                <a href=""><img src="foxbot.png" alt="Nacho Zorra" /></a>
+                <Link href="/">
+                    <a><img src="foxbot.png" alt="Nacho Zorra" /></a>
+                </Link>
             </div>
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
@@ -67,10 +69,14 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="#">PROYECTO</a>
+                                <Link href="/proyecto">
+                                    <a className="nav-link" aria-current="page">PROYECTO</a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">CONTACTO</a>
+                                <Link href="/contacto">
+                                    <a className="nav-link">CONTACTO</a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
