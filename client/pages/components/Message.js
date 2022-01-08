@@ -14,9 +14,9 @@ const Message = (props) => (
                                 {props.text}
                             </span>
                         </div>
-                        {props.speaks === 'me' && 
+                        {props.speaks === 'Yo' && 
                         <div className="col-sm-2">
-                            <button type="button" class="btn btn-outline-primary">{props.speaks}</button>
+                            <button type="button" className="btn btn-outline-primary">{props.speaks}</button>
                         </div>
                         }
                     </div>
