@@ -6,6 +6,10 @@ module.exports = app => {
         res.send({'hi': 'there'});
     });
     
+    app.get('/api', async (req, res) => {
+        res.send({'Api': 'there'});
+    });
+
     app.post('/api/df_text_query', async (req, res) => {
         let responses = await chatbot.textQuery(req.body.text, req.body.userID, req.body.parameters);
         res.send(responses[0].queryResult);
